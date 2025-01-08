@@ -1,0 +1,7 @@
+{
+  "name": "buenomenu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

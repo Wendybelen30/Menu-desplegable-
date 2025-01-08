@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Menú Principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+  <div class="menu-horizontal">
+    <div
+      class="menu-item"
+      *ngFor="let elemento of elementos"
+      (click)="mostrarEventos(elemento.id)">
+      {{ elemento.nombre }}
+    </div>
+  </div>
+  <div *ngIf="eventos.length > 0" class="submenu-vertical">
+    <h3>Eventos</h3>
+    <div
+      class="submenu-item"
+      *ngFor="let evento of eventos"
+      (click)="mostrarActividades(evento.id)">
+      {{ evento.nombre }}
+    </div>
+  </div>
+  <div *ngIf="actividades.length > 0" class="submenu-vertical-actividades">
+    <h3>Actividades</h3>
+    <div class="submenu-item-actividad" *ngFor="let actividad of actividades">
+      {{ actividad.nombre }}
+    </div>
+  </div>
+
